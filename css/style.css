@@ -1,0 +1,257 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: black;
+    margin-bottom: 100px;
+    max-width: 100%;
+}
+section{
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+h1{
+    text-align: center;
+    font-size: 6rem;
+    color: yellow;
+    font-style: italic;
+}
+.container{
+    margin: auto;
+    text-align: center;
+    width: 420px;
+    max-width: 100%;
+}
+.registerForm{
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 2rem;
+    padding: 15px;
+    box-sizing: border-box;
+}
+input{
+    width: 50%;
+    margin-bottom: 10px;
+}
+.d-none{
+    display: none;
+}
+
+.loginForm{
+    width: 100%;
+    display: none;
+    background-color: yellow;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 2rem;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.registerBtn{
+    border: 1px solid black;
+    padding: 0 5px;
+    font-size: 1.5rem;
+    background-color: yellow;
+    border-radius: 15px;
+}
+.loginBtn{
+    border: 1px solid black;
+    padding: 0 5px;
+    font-size: 1.5rem;
+    background-color: aqua;
+    border-radius: 15px;
+}
+.smartSelect{
+    width: 70vw;
+    display: block;
+    background-color: black;
+    margin: auto;
+    position: relative;
+    text-align: center;
+}
+
+.promtMessage{
+    font-size: 5rem;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    height: 100px;
+}
+.containerselectBtn{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 250px;
+}
+.garage img{
+    display: inline-block;
+    max-width: 100%;
+    max-height: 100%;
+    border: 1px solid black;
+    filter: hue-rotate(45deg);
+}
+.garage{
+    width: 300px;
+    transform: scale(1.5);
+    max-width: 100%;
+    position: absolute;
+    margin-left: -150px;
+    left: 50%;
+    bottom: 10%;
+    transition: all 2s;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px;
+    z-index: 3;
+}
+
+.carSelect *, .carSelect, .engine, .engine *{
+    margin: 10px;
+    appearance: none;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+}
+button{
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 40px;
+    background-color: yellow;
+}
+.d-none{
+    display: none !important;
+}
+.carSelect:active, .engine:active{
+    border-width: 1px;
+    outline: none;
+}
+.track{
+    border-bottom: 5px solid white;
+    border-top: 5px solid white;
+    height: 500px;
+    box-sizing: border-box;
+    background-color: black;
+    position: relative;
+}
+.track:after{
+    display: inline-block;
+    width: 100%;
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-top: 5px white dashed;
+}
+.car1{
+    display: inline-block;
+    width: 300px;
+    height: 230px;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+}
+.car2{
+    display: inline-block;
+    width: 300px;
+    height: 230px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.car>img{
+    display: inline-block;
+    width: 100%;
+}
+.traffic__light__container{
+    width: 50px;
+    height: 150px;
+    border: 2px solid white;
+    padding: 5px;
+    flex-direction: column;
+    border-radius: 50px;
+    position: absolute;
+    left: 30%;
+    bottom: 33%;
+    z-index: 2;
+}
+
+.traffic__light{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    display: block;
+    border-radius: 50px;
+}
+.finish{
+    position: absolute;
+    right: 5%;
+    width: 10px;
+    border-right: 4px solid white;
+    border-left: 4px solid white;
+    height: 100%;
+}
+.history{
+    position: fixed;
+    right: 2rem;
+    color: black;
+    top: 1rem;
+    z-index: 4;
+}
+ .history:hover>.history__container {
+     display: inline-block;
+ }
+.history i{
+    color: white;
+    font-size: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+.history__container{
+    width: 320px;
+    height: 320px;
+    border: 1px solid white;
+    z-index: 4;
+    position: absolute;
+    background-color: white;
+    display: none;
+    top: 6rem;
+    right: 0;
+}
+.history__container__item{
+    font-size: 1rem;
+    color: black;
+    border-bottom: 1px solid black;
+}
+.history__container__item p:first-of-type{
+    color: red;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.history__winner{
+    font-weight: bold;
+    color: red;
+}
