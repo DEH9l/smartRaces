@@ -10,11 +10,9 @@ let promtMessage = document.getElementsByClassName('promtMessage')[0];
 let newRaceBtn = document.getElementsByClassName('newRace')[0];
 let histrory = document.getElementsByClassName('history__container')[0];
 
-
 selctBtn.addEventListener('click', addToGarage);
 raceBtn.classList.toggle('d-none', true);
 newRaceBtn.classList.toggle('d-none',true);
-
 
 function addToGarage() {
     if (!garage[0]) {
