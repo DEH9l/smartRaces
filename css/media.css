@@ -1,0 +1,5 @@
+@media screen and (max-width: 960px){
+    h1,.history i, .promtMessage{
+        font-size: 4rem;
+    }
+}
