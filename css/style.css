@@ -215,12 +215,12 @@ button{
     height: 100%;
 }
 .history{
-    position: fixed;
+    position: absolute;
     right: 2rem;
     color: black;
     top: 1rem;
     z-index: 4;
-    width: 100%;
+    max-width: 320px;
 }
  .history:hover>.history__container {
      display: inline-block;
@@ -240,9 +240,10 @@ button{
     display: none;
     top: 6rem;
     right: 0;
+    width: 320px;
 }
 .history__container__item{
-    font-size: 1rem;
+    font-size: 0.7rem;
     color: black;
     text-wrap: none;
     border-bottom: 1px solid black;
