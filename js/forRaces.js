@@ -1,6 +1,7 @@
 let garage = [];
 let car = document.getElementsByClassName('garage');
-const CARS = [['450', {engine: [[0.6, '50hp'], [0.7, '61hp'], [0.8, '41hp'], ['0.7 Brabus', '75hp']]}], ['roadster', {engine: [[0.7, '82hp'], ['0.7 Brabus', '101hp']]}], ['451', {engine: [[0.8, '54hp'], [1.0, '71hp'], [1.0, '84hp'], ['1.0 Brabus', '102hp']]}], ['453', {engine: [[1.0, '71hp'], [0.9, '90hp'], ['0.9 Brabus', '109hp']]}]];
+const CARS = [['450', {engine: [['0.6 Gasoline', '50hp'], ['0.7 Gasoline', '61hp'], ['0.8 Diesel', '41hp'], ['0.7 Brabus', '75hp']]}], ['roadster', {engine: [['0.7 Gasoline', '82hp'], ['0.7 Brabus', '101hp']]}], ['451', {engine: [['0.8 Diesel', '54hp'],['Electric','71hp'], ['1.0 Gasoline', '71hp'], ['1.0 Gasoline', '84hp'], ['1.0 Brabus', '102hp']]}], ['453', {engine: [['1.0 Gasoline', '71hp'],['Electric','80hp'],['0.9 Gasoline', '90hp'], ['0.9 Brabus', '109hp']]}], ['454', {engine: [['1.1 Gasoline', '75hp'], ['1.1 Gasoline', '63hp'], ['1.3 Gasoline', '95hp'],['1.5 Diesel','95hp'],['1.5 Diesel','68hp'],['1.5 Brabus','109hp']]}],
+    ['453 ForFour', {engine: [[1.0, '71hp'],['Electric','80hp'],[0.9, '90hp'], ['0.9 Brabus', '109hp'],['Electric','82hp']]}]];
 let garageHTML = document.getElementsByClassName('containerselectBtn')[0];
 let selctBtn = document.getElementsByClassName('selectBtn')[0];
 let carSelect = document.getElementsByClassName('carSelect')[0];
@@ -70,6 +71,7 @@ function removeFromGarage(event) {
 garageHTML.addEventListener('click', removeFromGarage);
 
 let startRace = () => {
+    garageHTML.removeEventListener('click', removeFromGarage);
     for (let i = 0; i <= garage.length - 1; i++) {
         garage[i][1] = document.getElementsByClassName('engine')[i].value.split(',')[1].split('').slice(0, this.length - 2).join('');
         raceCars[i].innerHTML = `<img src="images/${garage[i][0]}.jpg">`;
@@ -104,6 +106,7 @@ function carRace(callback = () => {
 newRaceBtn.addEventListener('click',clearValues);
 
 function clearValues() {
+    garageHTML.addEventListener('click', removeFromGarage);
     histrory.insertAdjacentHTML('afterbegin', `<div class="history__container__item"><p class="">${promtMessage.innerText }</p><p class="">Smart:${garage[0][0]}, engine: ${garage[0][1]} hp, <span class="history__winner">VS</span> Smart ${garage[1][0]}, engine: ${garage[1][1]} hp</p> </div> `);
     garage = [];
     carSelect.style.display = 'inline-block';

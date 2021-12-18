@@ -6,9 +6,8 @@ let users = [];
 
 document.getElementsByClassName('registerBtn')[0].addEventListener('click', function () {
     function checkNumInPass() {
-        return passwort.value.split('').some(char => {
-            return typeof parseInt(char) === 'number' && parseInt(char)
-        });
+        let logRegExp = /\d/;
+        return logRegExp.test(passwort.value);
     }
     function correctLogin() {
         return logen.value.length > 3;
