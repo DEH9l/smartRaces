@@ -69,6 +69,7 @@ function removeFromGarage(event) {
 }
 
 garageHTML.addEventListener('click', removeFromGarage);
+garageHTML.addEventListener('Touch', removeFromGarage);
 
 let startRace = () => {
     garageHTML.removeEventListener('click', removeFromGarage);
